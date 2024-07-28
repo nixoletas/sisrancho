@@ -32,9 +32,11 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@govbr-ds/core/dist/core.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@govbr-ds/core/dist/core.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -91,12 +93,17 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@govbr-ds/core/dist/core.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/@govbr-ds/core/dist/core.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

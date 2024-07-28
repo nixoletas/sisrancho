@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { BrMenuComponent } from './components/menu/menu.component';
+import { BrHeaderComponent } from './components/header/header.component';
+import { PopUpComponent } from './components/pop-up/pop-up.component';
+import { BrFooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, BrMenuComponent, BrHeaderComponent, PopUpComponent, BrFooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'teste';
+  title = 'intranet-ssr';
 }
