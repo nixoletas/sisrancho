@@ -32,6 +32,7 @@ import { ChamadoStiComponent } from './pages/chamado-sti/chamado-sti.component';
 import { SistemasExternosComponent } from './pages/sistemas-externos/sistemas-externos.component';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CartilhasENormasComponent } from './pages/cartilhas-e-normas/cartilhas-e-normas.component';
 
 export const routes: Routes = [
     {
@@ -114,4 +115,6 @@ export const routes: Routes = [
       component: LinksUteisComponent
     },
     { path: 'sistemas-externos', component: SistemasExternosComponent },
+    { path: 'cartilhas-e-normas', component: CartilhasENormasComponent },
+
 ];
