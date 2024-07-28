@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: angular-intranet
+    ports:
+      - "80:80"
+    volumes:
+      - ./dist/teste/browser:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    restart: unless-stopped
