@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../../environments/environment';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'br-sti',
+  standalone: true,
+  imports: [MarkdownModule],
   template: `
   <h2><strong>STI do 9º B Com GE</strong></h2>
   <markdown [src]="markdownSrc"></markdown>

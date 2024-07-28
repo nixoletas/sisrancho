@@ -19,6 +19,16 @@ import { ModelosComponent } from './pages/secoes/s1/modelos/modelos.component';
 import { OsComponent } from './pages/secoes/s1/os/os.component';
 import { S1PageComponent } from './pages/secoes/s1/s1.component';
 import { SecretariaComponent } from './pages/secoes/s1/secretaria/secretaria.component';
+import { AvisosS2Component } from './pages/secoes/s2/avisos/avisos.component';
+import { DocumentosS3Component } from './pages/secoes/s3/documentos/documentos.component';
+import { LegislacaoS4Compoent } from './pages/secoes/s4/legislacao/legislacao.component';
+import { ModelosS4Compoent } from './pages/secoes/s4/modelos/modelos.component';
+import { EgpComponent } from './pages/secoes/egp/egp.component';
+import { FiscalizacaoComponent } from './pages/secoes/fiscalizacao/fiscalizacao.component';
+import { ArquivosSalcComponent } from './pages/secoes/salc/arquivos/arquivos.component';
+import { PregoesSalcComponent } from './pages/secoes/salc/pregoes/pregoes.component';
+import { StiComponent } from './pages/secoes/sti/sti.component';
+import { LinksUteisComponent } from './pages/links-uteis/links-uteis.component';
 
 export const routes: Routes = [
     {
@@ -60,4 +70,43 @@ export const routes: Routes = [
         { path: 'secretaria', component: SecretariaComponent },
       ]
     },
+    {
+      path: 's2',
+      children: [
+        { path: 'avisos', component: AvisosS2Component },
+      ]
+    },
+    {
+      path: 's3',
+      children: [
+        { path: 'documentos', component: DocumentosS3Component },
+      ]
+    },
+    {
+      path: 's4',
+      children: [
+        { path: 'legislacao', component: LegislacaoS4Compoent },
+        { path: 'modelos', component: ModelosS4Compoent },
+      ]
+    },
+    {
+      path: 'salc',
+      children: [
+        { path: 'arquivos', component: ArquivosSalcComponent },
+        { path: 'pregoes', component: PregoesSalcComponent },
+      ]
+    },
+    {
+      path: 'fiscalizacao',
+      component: FiscalizacaoComponent
+    },
+    {
+      path: 'egp',
+      component: EgpComponent
+    },
+    { path: 'sti', component: StiComponent },
+    {
+      path: 'links-uteis',
+      component: LinksUteisComponent
+    }
 ];
