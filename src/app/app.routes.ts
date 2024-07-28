@@ -1,5 +1,4 @@
-import { Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicoPageComponent } from './pages/secoes/s1/servico/servico.component';
 import { RamaisComponent } from './pages/ramais/ramais.component';
@@ -29,6 +28,10 @@ import { ArquivosSalcComponent } from './pages/secoes/salc/arquivos/arquivos.com
 import { PregoesSalcComponent } from './pages/secoes/salc/pregoes/pregoes.component';
 import { StiComponent } from './pages/secoes/sti/sti.component';
 import { LinksUteisComponent } from './pages/links-uteis/links-uteis.component';
+import { ChamadoStiComponent } from './pages/chamado-sti/chamado-sti.component';
+import { SistemasExternosComponent } from './pages/sistemas-externos/sistemas-externos.component';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 export const routes: Routes = [
     {
@@ -105,8 +108,10 @@ export const routes: Routes = [
       component: EgpComponent
     },
     { path: 'sti', component: StiComponent },
+    { path: 'sti/chamado', component: ChamadoStiComponent },
     {
       path: 'links-uteis',
       component: LinksUteisComponent
-    }
+    },
+    { path: 'sistemas-externos', component: SistemasExternosComponent },
 ];
