@@ -11,6 +11,14 @@ import { InstitucionalComponent } from './pages/institucional/institucional.comp
 import { MissaoComponent } from './pages/institucional/missao/missao.component';
 import { SubordinacaoComponent } from './pages/institucional/subordinacao/subordinacao.component';
 import { VisaoComponent } from './pages/institucional/visao/visao.component';
+import { AditamentosComponent } from './pages/secoes/s1/aditamentos/aditamentos.component';
+import { AssJurdComponent } from './pages/secoes/s1/ass-jurd/ass-jurd.component';
+import { AvisosComponent } from './pages/secoes/s1/avisos/avisos.component';
+import { BoletinsComponent } from './pages/secoes/s1/boletins/boletins.component';
+import { ModelosComponent } from './pages/secoes/s1/modelos/modelos.component';
+import { OsComponent } from './pages/secoes/s1/os/os.component';
+import { S1PageComponent } from './pages/secoes/s1/s1.component';
+import { SecretariaComponent } from './pages/secoes/s1/secretaria/secretaria.component';
 
 export const routes: Routes = [
     {
@@ -41,7 +49,15 @@ export const routes: Routes = [
     {
       path: 's1',
       children: [
+        { path: '', component: S1PageComponent },
+        { path: 'boletins', component: BoletinsComponent },
+        { path: 'avisos', component: AvisosComponent },
         { path: 'servico', component: ServicoPageComponent },
+        { path: 'aditamentos', component: AditamentosComponent },
+        { path: 'modelos', component: ModelosComponent },
+        { path: 'os', component: OsComponent },
+        { path: 'ass-jurd', component: AssJurdComponent },
+        { path: 'secretaria', component: SecretariaComponent },
       ]
     },
 ];
