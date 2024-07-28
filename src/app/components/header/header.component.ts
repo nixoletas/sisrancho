@@ -3,11 +3,12 @@ import { Component, ElementRef } from '@angular/core'
 import BRHeader from '@govbr-ds/core/dist/components/header/header'
 import { environment } from '../../../environments/environment.prod'
 import { CommonModule } from '@angular/common'
+import { RouterModule } from '@angular/router'
 
 @Component({
   selector: 'br-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
