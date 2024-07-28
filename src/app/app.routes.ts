@@ -33,6 +33,8 @@ import { SistemasExternosComponent } from './pages/sistemas-externos/sistemas-ex
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CartilhasENormasComponent } from './pages/cartilhas-e-normas/cartilhas-e-normas.component';
+import { NewsDetailComponent } from './components/news-detail/news-detail.component';
+import { NoticiasComponent } from './pages/noticias/noticias.component';
 
 export const routes: Routes = [
     {
@@ -43,6 +45,8 @@ export const routes: Routes = [
       path: 'home',
       component: HomeComponent,
     },
+    { path: 'noticias', component: NoticiasComponent },
+    { path: 'noticias/:id', component: NewsDetailComponent },
     {
       path: 'institucional',
       children: [
