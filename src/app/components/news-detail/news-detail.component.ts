@@ -1,6 +1,6 @@
 import { CommonModule, DatePipe } from '@angular/common';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { NewsItem } from '../news/news.model';
 import { NewsService } from '../news/news.service';
 import { MarkdownComponent } from 'ngx-markdown';
@@ -8,7 +8,7 @@ import { MarkdownComponent } from 'ngx-markdown';
 @Component({
   selector: 'app-news-detail',
   standalone: true,
-  imports: [CommonModule, MarkdownComponent],
+  imports: [CommonModule, MarkdownComponent, RouterModule],
   templateUrl: './news-detail.component.html',
   styleUrls: ['./news-detail.component.scss'],
   providers: [DatePipe]
