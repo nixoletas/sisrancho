@@ -17,7 +17,6 @@ const inMemoryScrollingFeature: InMemoryScrollingFeature =
 export const appConfig: ApplicationConfig = {
 
   providers: [
-    provideExperimentalZonelessChangeDetection(),
     provideMarkdown(),
     provideRouter(routes, inMemoryScrollingFeature),
     provideClientHydration(),
