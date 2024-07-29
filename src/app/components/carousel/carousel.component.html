@@ -7,8 +7,8 @@
            </button>
           </div>
           <div class="carousel-stage">
-            <div *ngFor="let item of items; let i = index">
-              <div *ngIf="i === currentIndex" [attr.active]="'active'" class="carousel-page" role="group" aria-roledescription="slide" aria-live="polite">
+            <div *ngFor="let item of items(); let i = index">
+              <div *ngIf="i === currentIndex()" [attr.active]="'active'" class="carousel-page" role="group" aria-roledescription="slide" aria-live="polite">
                 <div class="carousel-content bg-blue-10">
                   <div *ngIf="!item.link; else linkTemplate" class="titulo">
                     <h3>{{item.title}}</h3>
@@ -27,7 +27,7 @@
           </div>
           <div class="carousel-button">
             <div class="timer-display">
-             {{countdown}}s
+             {{countdown()}}s
            </div>
             <button class="br-button carousel-btn-next terciary circle" type="button" aria-label="Próximo" (click)="nextSlide()"><i class="fas fa-chevron-right" aria-hidden="true"></i>
         </button>
@@ -35,7 +35,7 @@
       <div class="carousel-step">
         <nav class="br-step" data-initial="1" data-type="simple" role="none">
           <div class="step-progress" role="listbox" aria-orientation="horizontal" aria-label="Lista de Opções">
-            <button *ngFor="let item of items; let i = index" class="step-progress-btn" [ngClass]="{'active': i === currentIndex}" role="option" [attr.aria-posinset]="i + 1" [attr.aria-setsize]="items.length" type="button">
+            <button *ngFor="let item of items(); let i = index" class="step-progress-btn" [ngClass]="{'active': i === currentIndex()}" role="option" [attr.aria-posinset]="i + 1" [attr.aria-setsize]="items().length" type="button">
               <span class="step-info">banner{{ i + 1 }}</span>
             </button>
           </div>
