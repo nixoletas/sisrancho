@@ -233,6 +233,12 @@ export class BrMenuComponent implements AfterViewInit {
       children: []
     },
     {
+      iconClass: 'fa-utensils',
+      label: 'Arranchamento',
+      route: 'http://sistemas.9bcomge.eb.mil.br/sisrancho/',
+      external: true
+    },
+    {
       iconClass: 'fa-headset',
       label: 'Chamado - STI',
       route: 'sti/chamado'
