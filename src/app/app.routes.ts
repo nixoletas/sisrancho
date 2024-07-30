@@ -35,6 +35,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CartilhasENormasComponent } from './pages/cartilhas-e-normas/cartilhas-e-normas.component';
 import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
+import { Ciac2Component } from './pages/ciac2/ciac2.component';
 
 export const routes: Routes = [
     {
@@ -118,7 +119,12 @@ export const routes: Routes = [
       path: 'links-uteis',
       component: LinksUteisComponent
     },
+    {
+      path: 'ciac2',
+      component: Ciac2Component
+    },
     { path: 'sistemas-externos', component: SistemasExternosComponent },
     { path: 'cartilhas-e-normas', component: CartilhasENormasComponent },
+    { path: '**', redirectTo: 'home' }
 
 ];
