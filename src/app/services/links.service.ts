@@ -30,7 +30,6 @@ export class LinksService {
     { href: 'http://intranet.9rm.eb.mil.br', title: '9ª RM', target: '_blank', icon: '' },
     { href: 'http://intranet.badmapcmo.eb.mil.br', title: 'B Adm Ap/CMO', target: '_blank', icon: '' },
     { href: 'http://intranet.6cta.eb.mil.br', title: '6º CTA', target: '_blank', icon: '' },
-    { href: 'http://intranet.6bim.eb.mil.br', title: '6º BIM', target: '_blank', icon: '' },
     { href: 'http://intranet.9bpe.eb.mil.br', title: '9º BPE', target: '_blank', icon: '' },
     { href: 'http://www.hmilacg.eb.mil.br/', title: 'HMILACG', target: '_blank', icon: '' },
     { href: 'http://www.cmcg.eb.mil.br/', title: 'CMCG', target: '_blank', icon: '' }
