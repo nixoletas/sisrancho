@@ -19,7 +19,6 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideMarkdown(),
     provideRouter(routes, inMemoryScrollingFeature),
-    provideClientHydration(),
     provideHttpClient(withFetch())
   ]
 };
