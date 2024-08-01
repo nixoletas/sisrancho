@@ -3,7 +3,6 @@ import { environment } from '../../../environments/environment';
 import { PopUpService } from './pop-up.service';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-popup',
