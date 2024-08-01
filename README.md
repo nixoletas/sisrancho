@@ -114,3 +114,20 @@ as rotas ficam disponíveis em "app.routes.ts" na pasta /src
     { path: 'cartilhas-e-normas', component: CartilhasENormasComponent },
     { path: '**', redirectTo: 'home' }
 ```
+
+### componentes
+os componentes fica em /src/app/components
+
+- aniversariantes	
+- button-balloon
+- calendario
+- carousel
+- footer
+- header
+- menu
+- message
+- news
+- news-detail
+- pop-up
+- qts-qtfm
+- tab
