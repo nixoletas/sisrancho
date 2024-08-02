@@ -2,7 +2,7 @@
   <nav class="tab-nav">
     <ul>
       <li class="tab-item active" title="sistemas">
-        <button type="button" data-panel="panel-1-small"><span class="name"><i class="fa fa-laptop"></i> Sistemas</span></button>
+        <button type="button" data-panel="panel-1-small"><span class="name"><i class="fa fa-laptop"></i> Principal</span></button>
       </li>
       <li class="tab-item" title="intranets">
         <button type="button" data-panel="panel-2-small"><span class="name"><i class="fa fa-handshake"></i> Intranets</span></button>
@@ -14,7 +14,7 @@
   </nav>
   <div class="tab-content" style="display: flex; justify-content: center;">
     <div class="tab-panel active" id="panel-1-small">
-      <ng-container *ngFor="let link of systems">
+      <ng-container *ngFor="let link of mainLinks">
         <a [href]="link.href" [target]="link.target || '_self'"><i [class]="link.icon"></i> {{ link.title }}</a>
       </ng-container>
     </div>

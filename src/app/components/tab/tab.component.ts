@@ -19,7 +19,7 @@ interface Link {
 })
 export class TabComponent implements AfterViewInit {
   instance: any;
-  systems: Link[];
+  mainLinks: Link[];
 
   intranets: Link[];
 
@@ -31,7 +31,7 @@ export class TabComponent implements AfterViewInit {
     private brTab: ElementRef,
     private linkService: LinksService
   ) {
-    this.systems = this.linkService.systems;
+    this.mainLinks = this.linkService.mainLinks;
     this.intranets = this.linkService.intranets;
     this.usefulLinks = this.linkService.usefulLinks;
     this.userHelp = this.linkService.userHelp;

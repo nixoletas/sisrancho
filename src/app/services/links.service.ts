@@ -12,6 +12,17 @@ interface Link {
   providedIn: 'root'
 })
 export class LinksService {
+  mainLinks: Link[] = [
+    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistemas Internos', target: '_blank', icon: 'fa fa-id-card' },
+    { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
+    { href: 'http://10.56.19.131', title: 'SPED 2.9', target: '_blank', icon: 'fa fa-file-lines' },
+    { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
+    { href: '/s1/boletins', title: 'Boletins', icon: 'fa fa-magnifying-glass' },
+    { href: 'http://drive.9bcomge.eb.mil.br/index.php/login', title: 'Drive', target: '_blank', icon: 'fa fa-cloud' },
+    { href: 'https://correio.9bcomge.eb.mil.br/', title: 'Zimbra', icon: 'fa fa-envelope', target: '_blank' },
+    { href: 'https://sgd.eb.mil.br/pages/login.faces#app', title: 'SGD', target: '_blank', icon: 'fa fa-chart-line' },
+  ];
+
   systems: Link[] = [
     { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistemas Internos', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
@@ -22,7 +33,6 @@ export class LinksService {
     { href: 'https://correio.9bcomge.eb.mil.br/', title: 'Zimbra', icon: 'fa fa-envelope', target: '_blank' },
     { href: 'https://sgd.eb.mil.br/pages/login.faces#app', title: 'SGD', target: '_blank', icon: 'fa fa-chart-line' },
     { href: 'https://pdf.9bcomge.eb.mil.br/', title: 'PDF Editor', target: '_blank', icon: 'fa fa-file-pdf' },
-
   ];
 
   intranets: Link[] = [
