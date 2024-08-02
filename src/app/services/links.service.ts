@@ -13,7 +13,7 @@ interface Link {
 })
 export class LinksService {
   mainLinks: Link[] = [
-    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistemas Internos', target: '_blank', icon: 'fa fa-id-card' },
+    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.131', title: 'SPED 2.9', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
@@ -24,7 +24,7 @@ export class LinksService {
   ];
 
   systems: Link[] = [
-    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistemas Internos', target: '_blank', icon: 'fa fa-id-card' },
+    { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
     { href: 'http://boletim.9bcomge.eb.mil.br/documents?sort=created&reverse=1&page=1', title: 'Boletins', target: '_blank', icon: 'fa fa-magnifying-glass' },
