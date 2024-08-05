@@ -96,6 +96,13 @@ export class LinksService {
       description: 'Viaturas 9RM'
     },
     {
+      href: 'http://10.56.120.7/sca/',
+      title: 'SCA',
+      target: '_blank',
+      icon: 'fa fa-gas-pump',
+      description: 'Sistema para Controle de Abastecimento (Comando do 9º Grupamento Logístico)'
+    },
+    {
       href: 'http://intranet.cmo.eb.mil.br/index.php/cancao-do-sd-pantaneiro',
       title: 'Canção do Soldado Pantaneiro',
       target: '_blank',
