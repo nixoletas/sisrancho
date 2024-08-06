@@ -1,16 +1,18 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { MarkdownModule } from 'ngx-markdown';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'br-sti',
   standalone: true,
-  imports: [MarkdownModule],
+  imports: [MarkdownModule, RouterLink],
   template: `
-  <h2><strong>STI do 9º B Com GE</strong></h2>
-  <markdown [src]="markdownSrc"></markdown>
+  <h2><strong>Seção de Tecnologia da Informação</strong></h2>
+  <h4><strong>Ramal:</strong> 5718</h4>
+  <p><a routerLink="/sti/chamado"><strong>Abrir chamado (Suporte)</strong><i class="fa fa-link"></i> </a></p>
   <div class="br-divider my-6"></div>
-  <a href="https://sti.9bcomge.eb.mil.br/" target="_blank"><h2 class="rounder-lg border-solid-md	 bg-blue-80 text-pure-0">Painel STI <i class="fa fa-link"></i></h2></a>
+  <a href="https://sti.9bcomge.eb.mil.br/" target="_blank"><h2 class="rounder-lg border-solid-md	 bg-blue-70 text-pure-0">Dashboard <i class="fa fa-link"></i></h2></a>
 <div class="br-table" title="Sistemas STI">
     <div class="table-header">
       <div class="top-bar">
