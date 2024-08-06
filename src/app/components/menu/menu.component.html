@@ -41,7 +41,7 @@
       </span>
       <span class="content">{{ item.label }}</span>
     </a>
-    <a class="menu-item" *ngIf="item.route && item.external" [href]="item.route" target="_blank" role="treeitem">
+    <a class="menu-item" *ngIf="item.route && item.external" [href]="item.route" [target]="item.target" role="treeitem">
       <span class="icon">
         <i class="fas" [class]="item.iconClass" aria-hidden="true"></i>
       </span>

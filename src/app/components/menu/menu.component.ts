@@ -277,7 +277,8 @@ export class BrMenuComponent implements AfterViewInit {
       iconClass: item.icon,
       label: item.title,
       route: item.href,
-      external: true
+      external: true,
+      target: item?.target
     }));
 
     this.menuItems[5].children = this.linksService.userHelp.map(item => ({
