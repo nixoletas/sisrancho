@@ -34,7 +34,6 @@ export class PopUpComponent implements OnInit, OnDestroy {
     if (isModalShown) {
       this.isVisible = false;
     } else {
-
       this.isVisible = true;
       sessionStorage.setItem('isModalShown', 'true');
       // Automatically close the modal after a set time, if configured
@@ -70,6 +69,12 @@ export class PopUpComponent implements OnInit, OnDestroy {
 
   closeModal(): void {
     this.isVisible = false;
+  }
+
+  handleLinkClick(event: MouseEvent): void {
+    // Prevents the default link action to avoid reopening the modal
+    event.stopImmediatePropagation();
+    this.closeModal();
   }
 
   ngOnDestroy(): void {
