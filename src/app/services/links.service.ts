@@ -27,6 +27,7 @@ export class LinksService {
     { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
     { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
+    { href: '/s1/boletins', title: 'Boletins', icon: 'fa fa-magnifying-glass' },
     { href: 'https://cloud.9bcomge.eb.mil.br/index.php/login', title: 'Cloud', target: '_blank', icon: 'fa fa-cloud' },
     { href: 'http://drive.9bcomge.eb.mil.br/index.php/login', title: 'Drive', target: '_blank', icon: 'fa fa-cloud' },
     { href: 'http://wekan.9bcomge.eb.mil.br', title: 'WeKan', target: '_blank', icon: 'fa fa-list' },
