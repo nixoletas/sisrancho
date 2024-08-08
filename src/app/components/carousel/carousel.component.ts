@@ -30,24 +30,37 @@ export class BrCarousel implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.loadGalerias();
-    this.instance = new BRCarousel('.br-carousel', this.brCarousel.nativeElement.querySelector('.br-carousel'));
-
-    // Start automatic sliding
-    this.startAutoSlide();
   }
 
   loadGalerias(): void {
     this.carouselService.getGalerias().subscribe(response => {
-      this.items.set(response.data.map(item => ({
+      const items = response.data.map(item => ({
         image: `${environment.STRAPI_API}${item.attributes.banner.data.attributes.formats.large.url}`,
         title: item.attributes.titulo,
         subtitle: item.attributes.subtitulo,
         link: item.attributes.link
-      })));
-      this.isLoading.set(false);
+      }));
 
-      // Update carousel after loading items
+      this.items.set(items);
+      this.preloadImages(items).then(() => {
+        this.isLoading.set(false);
+        this.instance = new BRCarousel('.br-carousel', this.brCarousel.nativeElement.querySelector('.br-carousel'));
+        this.startAutoSlide();
+      });
     });
+  }
+
+  preloadImages(items: any[]): Promise<void> {
+    const promises = items.map(item => {
+      return new Promise<void>((resolve, reject) => {
+        const img = new Image();
+        img.src = item.image;
+        img.onload = () => resolve();
+        img.onerror = () => reject();
+      });
+    });
+
+    return Promise.all(promises).then(() => { });
   }
 
   startAutoSlide(): void {
