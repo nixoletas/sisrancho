@@ -8,21 +8,23 @@ import { BrCarousel } from '../../components/carousel/carousel.component';
 import { MessageComponent } from '../../components/message/message.component';
 import { NewsComponent } from '../../components/news/news.component';
 import { QtsQtfmComponent } from '../../components/qts-qtfm/qts-qtfm.component';
+import { InstagramComponent } from "../../components/instagram/instagram.component";
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   standalone: true,
   imports: [
-    TabComponent, 
-    AniversariantesComponent, 
+    TabComponent,
+    AniversariantesComponent,
     ButtonBalloonComponent,
     CalendarioComponent,
     BrCarousel,
     MessageComponent,
     NewsComponent,
     QtsQtfmComponent,
-  ],
+    InstagramComponent
+],
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {

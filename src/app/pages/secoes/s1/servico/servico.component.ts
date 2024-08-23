@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { environment } from '../../../../../environments/environment';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-servico',
   templateUrl: './servico.component.html',
+  standalone: true,
+  imports: [MarkdownModule]
 })
 export class ServicoPageComponent {
   iframeSrc: SafeResourceUrl;
