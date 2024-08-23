@@ -29,16 +29,29 @@ export class AniversariantesComponent implements OnInit {
     this.aniversariantesService.getCollection().subscribe({
       next: (response) => {
         const currentMonth = new Date().getMonth();
+        const today = new Date();
+  
         this.data = response.data.filter((item: any) => {
           const birthdate = new Date(item.attributes['birthdate']);
           return birthdate.getMonth() === currentMonth;
         });
-
-        // Ordenar pela data de aniversário
+  
+        // Ordenar pela data de aniversário, priorizando o aniversário de hoje
         this.data.sort((a, b) => {
-          const dateA = new Date(a.attributes['birthdate']).getDate();
-          const dateB = new Date(b.attributes['birthdate']).getDate();
-          return dateA - dateB;
+          const birthdateA = new Date(a.attributes['birthdate']);
+          const birthdateB = new Date(b.attributes['birthdate']);
+  
+          const isTodayA = this.isBirthdayToday(a.attributes['birthdate']);
+          const isTodayB = this.isBirthdayToday(b.attributes['birthdate']);
+  
+          if (isTodayA && !isTodayB) {
+            return -1; // a should come first
+          } else if (!isTodayA && isTodayB) {
+            return 1; // b should come first
+          } else {
+            // If neither or both are today, sort by date
+            return birthdateA.getDate() - birthdateB.getDate();
+          }
         });
       },
       error: (err) => {
