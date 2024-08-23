@@ -26,17 +26,18 @@ export class AniversariantesComponent implements OnInit {
   }
 
   fetchData(): void {
-    this.aniversariantesService.getCollection().subscribe({
-      next: (response) => {
-        const currentMonth = new Date().getMonth();
-        const today = new Date();
+    this.aniversariantesService.getAllData().subscribe({
+      next: (response) => {  
+        const currentMonth = new Date().getMonth(); // Mês atual (0-11)
   
-        this.data = response.data.filter((item: any) => {
+        // Filtra os dados para exibir apenas os aniversariantes do mês corrente
+        this.data = response.filter((item: any) => {
           const birthdate = new Date(item.attributes['birthdate']);
+  
           return birthdate.getMonth() === currentMonth;
         });
-  
-        // Ordenar pela data de aniversário, priorizando o aniversário de hoje
+    
+        // Ordena pela data de aniversário, priorizando o aniversário de hoje
         this.data.sort((a, b) => {
           const birthdateA = new Date(a.attributes['birthdate']);
           const birthdateB = new Date(b.attributes['birthdate']);
@@ -45,11 +46,10 @@ export class AniversariantesComponent implements OnInit {
           const isTodayB = this.isBirthdayToday(b.attributes['birthdate']);
   
           if (isTodayA && !isTodayB) {
-            return -1; // a should come first
+            return -1; // Aniversário de hoje vem primeiro
           } else if (!isTodayA && isTodayB) {
-            return 1; // b should come first
+            return 1; // Aniversário de hoje vem primeiro
           } else {
-            // If neither or both are today, sort by date
             return birthdateA.getDate() - birthdateB.getDate();
           }
         });
@@ -59,12 +59,15 @@ export class AniversariantesComponent implements OnInit {
       }
     });
   }
+  
+  
 
+  // Verifica se a data de aniversário é hoje
   isBirthdayToday(birthdate: string): boolean {
     const today = new Date();
     const birthDate = new Date(birthdate);
 
     return today.getUTCDate() === birthDate.getUTCDate() &&
-      today.getUTCMonth() === birthDate.getUTCMonth();
+           today.getUTCMonth() === birthDate.getUTCMonth();
   }
 }
