@@ -55,11 +55,10 @@ export class AniversariantesComponent implements OnInit {
         });
       },
       error: (err) => {
-        console.error('Erro ao buscar dados do Strapi', err);
+        console.error('Erro ao buscar dados do Strapi');
       }
     });
   }
-  
   
 
   // Verifica se a data de aniversário é hoje
@@ -67,7 +66,7 @@ export class AniversariantesComponent implements OnInit {
     const today = new Date();
     const birthDate = new Date(birthdate);
 
-    return today.getUTCDate() === birthDate.getUTCDate() &&
-           today.getUTCMonth() === birthDate.getUTCMonth();
+    return today.getDate() === birthDate.getDate() &&
+           today.getMonth() === birthDate.getMonth();
   }
 }
