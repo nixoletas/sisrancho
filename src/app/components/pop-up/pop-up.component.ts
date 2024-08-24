@@ -62,6 +62,7 @@ export class PopUpComponent implements OnInit, OnDestroy {
       this.link = this.item?.attributes?.link;
       this.isLoading = false; // Set loading state to false after data is fetched
     }, error => {
+      console.log('Não há POP-UP publicado:', error);
       // Handle error if necessary
       this.isVisible = false; // Hide popup in case of error
       this.isLoading = false; // Set loading state to false
