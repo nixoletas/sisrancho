@@ -66,7 +66,7 @@ export class AniversariantesComponent implements OnInit {
     const today = new Date();
     const birthDate = new Date(birthdate);
 
-    return today.getDate() === birthDate.getDate() &&
-           today.getMonth() === birthDate.getMonth();
+    return today.getUTCDate() === birthDate.getUTCDate() &&
+           today.getUTCMonth() === birthDate.getUTCMonth();
   }
 }
