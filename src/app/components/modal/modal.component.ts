@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, signal } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
 import { AniversariantesService } from '../aniversariantes/aniversariantes.service';
 import { DatePipe } from '@angular/common';
 import { CommonModule, registerLocaleData } from '@angular/common';
@@ -13,6 +13,8 @@ import BRModal from '@govbr-ds/core/dist/components/modal/modal';
   providers: [DatePipe]
 })
 export class ModalComponent implements AfterViewInit {
+  @ViewChild('modalRef', {static: false}) modalRef: ElementRef | any;
+
   instance: any;
   data: any[] = [];
   currentMonth: string;
@@ -30,6 +32,7 @@ export class ModalComponent implements AfterViewInit {
   fetchData(): void {
     this.aniversariantesService.getAllData().subscribe({
       next: (response) => {  
+        this.isLoading.set(false);
         const currentMonth = new Date().getMonth(); // Mês atual (0-11)
   
         // Filtra os dados para exibir apenas os aniversariantes do mês corrente
@@ -68,6 +71,10 @@ export class ModalComponent implements AfterViewInit {
 
     return today.getUTCDate() === birthDate.getUTCDate() &&
            today.getUTCMonth() === birthDate.getUTCMonth();
+  }
+
+  close() {
+    this.modalRef.nativeElement.style.display = 'none';
   }
 
 }
