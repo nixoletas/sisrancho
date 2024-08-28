@@ -4,6 +4,7 @@ import { BrMenuComponent } from './components/menu/menu.component';
 import { BrHeaderComponent } from './components/header/header.component';
 import { PopUpComponent } from './components/pop-up/pop-up.component';
 import { BrFooterComponent } from './components/footer/footer.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',

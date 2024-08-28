@@ -9,6 +9,7 @@ import { MessageComponent } from '../../components/message/message.component';
 import { NewsComponent } from '../../components/news/news.component';
 import { QtsQtfmComponent } from '../../components/qts-qtfm/qts-qtfm.component';
 import { InstagramComponent } from "../../components/instagram/instagram.component";
+import { ModalComponent } from "../../components/modal/modal.component";
 
 @Component({
   selector: 'app-home',
@@ -23,7 +24,8 @@ import { InstagramComponent } from "../../components/instagram/instagram.compone
     MessageComponent,
     NewsComponent,
     QtsQtfmComponent,
-    InstagramComponent
+    InstagramComponent,
+    ModalComponent
 ],
   styleUrl: './home.component.scss'
 })
