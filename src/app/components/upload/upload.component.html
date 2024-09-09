@@ -1,0 +1,7 @@
+<div class="upload-container">
+    <h2>Material carga para .csv</h2>
+    <p>envie o PDF gerado pelo SISCOFIS da sua relação carga DETALHADA</p>
+    <input type="file" (change)="onFileSelected($event)" accept=".pdf" />
+    <button (click)="onUpload()" [disabled]="!selectedFile">Baixar material-carga.csv</button>
+  </div>
+  
