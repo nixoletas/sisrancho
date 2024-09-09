@@ -18,7 +18,9 @@ export const environment = {
   GALERIA_API: 'http://10.56.19.154/api/galerias?populate=*',
 
   INTRANET: 'http://10.56.19.133',
-  REPOSITORIO: 'http://10.56.19.159/webdav'
+  REPOSITORIO: 'http://10.56.19.159/webdav',
+
+  CARGA_UPLOAD: 'http://10.56.19.152:5000/upload'
 
 }
 
