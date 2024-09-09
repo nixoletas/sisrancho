@@ -245,7 +245,7 @@ export class BrMenuComponent implements AfterViewInit {
     },
     {
       iconClass: 'fa-file-pdf',
-      label: 'Material carga para CSV',
+      label: 'Material carga para planilha',
       route: 'carga-upload'
     },
     {
