@@ -244,6 +244,11 @@ export class BrMenuComponent implements AfterViewInit {
       route: 'sti/chamado'
     },
     {
+      iconClass: 'fa-file-pdf',
+      label: 'Material carga para CSV',
+      route: 'carga-upload'
+    },
+    {
       iconClass: 'fa-link',
       label: 'Links Úteis',
       route: 'links-uteis'
