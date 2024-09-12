@@ -1,7 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, signal, ViewChild } from '@angular/core';
 import { AniversariantesService } from '../aniversariantes/aniversariantes.service';
 import { DatePipe } from '@angular/common';
-import { CommonModule, registerLocaleData } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import BRModal from '@govbr-ds/core/dist/components/modal/modal';
 
 @Component({
