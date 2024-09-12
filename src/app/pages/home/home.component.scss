@@ -16,4 +16,15 @@
     gap: 1rem;
     right: 24px;
     top: 10rem;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Aplica a animação */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
