@@ -3,6 +3,7 @@ import { AniversariantesService } from '../aniversariantes/aniversariantes.servi
 import { DatePipe } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import BRModal from '@govbr-ds/core/dist/components/modal/modal';
+import { AvisosService } from '../../services/avisos.service';
 
 @Component({
   selector: 'br-modal',

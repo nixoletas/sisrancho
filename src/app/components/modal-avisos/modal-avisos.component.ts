@@ -23,7 +23,7 @@ export class ModalAvisosComponent implements AfterViewInit {
   constructor(private avisosService: AvisosService) { }
 
   ngAfterViewInit(): void {
-    this.instance = new BRModal('.br-menu', document.querySelector('.br-menu'));
+    this.instance = new BRModal('.br-menu-avisos', document.querySelector('.br-menu-avisos'));
     this.fetchData();
   }
 
@@ -37,6 +37,6 @@ export class ModalAvisosComponent implements AfterViewInit {
   };
 
   close() {
-    this.avisosRef.nativeElement.class = 'okkk';
+    this.avisosRef.nativeElement.style.display = 'none';
   }
 }
