@@ -11,12 +11,8 @@ export class AvisosService {
 
   constructor(private http: HttpClient) { }
 
-  getAvisos(): Observable<{
-    map(arg0: (item: any) => void): any[];
-    filter(arg0: (item: any) => void): any[]; data: any[] 
-}> {
-    const avisosTotal = this.http.get<{ data: any[] }>(this.apiUrl);
-    return avisosTotal;
+  getAvisos(): Observable<{data: any[]}> {
+    return this.http.get<{ data: any[] }>(this.apiUrl);
 }
 
 }
