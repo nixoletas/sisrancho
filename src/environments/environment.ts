@@ -15,6 +15,7 @@ export const environment = {
   NEWS_API: 'http://10.56.19.154/api/noticias?populate=*',
   SINGLE_NEWS: 'http://10.56.19.154/api/noticias',
   NIVER_API: 'http://10.56.19.154/api/familias',
+  AVISOS_API: 'http://10.56.19.154/api/avisos',
   GALERIA_API: 'http://10.56.19.154/api/galerias?populate=*',
 
   INTRANET: 'http://10.56.19.133',

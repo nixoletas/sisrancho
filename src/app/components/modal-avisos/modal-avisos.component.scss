@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.br-modal {
+    display: flex;
+    position: fixed;
+    right: 24px;
+    top: 14rem;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 0.5s ease-in-out forwards; /* Aplica a animação */
+}
