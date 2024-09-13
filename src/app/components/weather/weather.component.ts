@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class WeatherComponent implements AfterViewInit {
   isLoading = true;
-
+  
   url = "https://api.open-meteo.com/v1/forecast?latitude=-20.4428&longitude=-54.6464&current=temperature_2m,relative_humidity_2m,apparent_temperature,rain,wind_speed_10m&hourly=temperature_2m&forecast_days=3";
   weatherData: { 
     time?: string;
@@ -42,12 +42,15 @@ export class WeatherComponent implements AfterViewInit {
   fetchWeather(): Observable<any> {
     return this.http.get(`${this.url}`);
   }
-
+  
   formatDateToBrazilian(dateString: string): string {
     const date = new Date(dateString);
     const day = date.getDate().toString().padStart(2, '0');
-    const month = (date.getMonth() + 1).toString().padStart(2, '0'); // Mês em JavaScript é 0-based
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
 
-    return `${day}/${month}`;
+    const daysOfWeek = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+    const dayOfWeek = daysOfWeek[date.getDay()];
+
+    return `${day}/${month} (${dayOfWeek})`;
   }
 }
