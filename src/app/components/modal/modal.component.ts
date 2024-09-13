@@ -36,15 +36,16 @@ export class ModalComponent implements AfterViewInit {
     this.aniversariantesService.getAllData().subscribe({
       next: (response) => {  
         this.isLoading.set(false);
-        this.hasBirthdayToday = this.data.some(item => this.isBirthdayToday(item.attributes['birthdate']));
         const currentMonth = new Date().getMonth(); // Mês atual (0-11)
-  
+        
         // Filtra os dados para exibir apenas os aniversariantes do mês corrente
         this.data = response.filter((item: any) => {
           const birthdate = new Date(item.attributes['birthdate']);
-  
+          
           return birthdate.getMonth() === currentMonth;
         });
+        this.hasBirthdayToday = this.data.some(item => this.isBirthdayToday(item.attributes['birthdate']));
+        console.log(this.hasBirthdayToday)
     
         // Ordena pela data de aniversário, priorizando o aniversário de hoje
         this.data.sort((a, b) => {
