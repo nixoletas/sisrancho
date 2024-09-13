@@ -1,0 +1,19 @@
+<div class="mb-2">
+@if (!isLoading) {
+    <strong>Hoje: <i class="fa fa-calendar"></i> {{weatherData.time}}</strong>
+    <p>
+        Temperatura: <i class="fa-solid fa-temperature-three-quarters"></i> {{weatherData.temperature}}ºC
+        Umidade: {{weatherData.humidity}}%
+        Vento: <i class="fa-solid fa-wind"></i> {{weatherData.windSpeed}}
+        Chance de chuva: {{weatherData.rain}}%
+    </p>
+} @else {
+    <strong>Hoje: <i class="fa fa-calendar"></i> <i class="fa-solid fa-spinner"></i></strong>
+    <p>
+        Temperatura: <i class="fa-solid fa-temperature-three-quarters"></i> <i class="fa-solid fa-spinner"></i>ºC /
+        Umidade: <i class="fa-solid fa-bottle-water"></i> <i class="fa-solid fa-spinner"></i>% /
+        Vento: <i class="fa-solid fa-wind"></i> <i class="fa-solid fa-spinner"></i>
+        Chance de chuva: <i class="fa-solid fa-spinner"></i>%
+    </p>
+}
+</div>
