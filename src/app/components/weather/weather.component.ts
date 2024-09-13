@@ -1,6 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'br-weather',
@@ -12,7 +13,7 @@ import { Observable } from 'rxjs';
 export class WeatherComponent implements AfterViewInit {
   isLoading = true;
   
-  url = "https://api.open-meteo.com/v1/forecast?latitude=-20.4428&longitude=-54.6464&current=temperature_2m,relative_humidity_2m,apparent_temperature,rain,wind_speed_10m&hourly=temperature_2m&forecast_days=3";
+  url = environment.ASSETS_WEATHER;
   weatherData: { 
     time?: string;
     temperature?: number;
