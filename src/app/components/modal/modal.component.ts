@@ -20,6 +20,7 @@ export class ModalComponent implements AfterViewInit {
   data: any[] = [];
   currentMonth: string;
   isLoading = signal(true);
+  hasBirthdayToday = false;
 
   constructor(private aniversariantesService: AniversariantesService, private datePipe: DatePipe) {
     this.currentMonth = this.datePipe.transform(new Date(), 'MMMM', undefined, 'pt-BR') || '';
@@ -28,12 +29,14 @@ export class ModalComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     this.instance = new BRModal('.br-menu', document.querySelector('.br-menu'));
     this.fetchData();
+    console.log(this.isBirthdayToday)
   }
 
   fetchData(): void {
     this.aniversariantesService.getAllData().subscribe({
       next: (response) => {  
         this.isLoading.set(false);
+        this.hasBirthdayToday = this.data.some(item => this.isBirthdayToday(item.attributes['birthdate']));
         const currentMonth = new Date().getMonth(); // Mês atual (0-11)
   
         // Filtra os dados para exibir apenas os aniversariantes do mês corrente
