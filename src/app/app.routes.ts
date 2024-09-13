@@ -30,13 +30,10 @@ import { StiComponent } from './pages/secoes/sti/sti.component';
 import { LinksUteisComponent } from './pages/links-uteis/links-uteis.component';
 import { ChamadoStiComponent } from './pages/chamado-sti/chamado-sti.component';
 import { SistemasExternosComponent } from './pages/sistemas-externos/sistemas-externos.component';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { CartilhasENormasComponent } from './pages/cartilhas-e-normas/cartilhas-e-normas.component';
 import { NewsDetailComponent } from './components/news-detail/news-detail.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { Ciac2Component } from './pages/ciac2/ciac2.component';
-import { FileUploadService } from './services/file-upload.service';
 import { UploadComponent } from './components/upload/upload.component';
 
 export const routes: Routes = [
