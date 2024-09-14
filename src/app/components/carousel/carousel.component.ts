@@ -33,6 +33,11 @@ export class BrCarousel implements AfterViewInit, OnDestroy {
   }
 
   loadGalerias(): void {
+    if (!this.brCarousel || !this.brCarousel.nativeElement) {
+  console.error('brCarousel is not defined');
+  return;
+}
+
     this.carouselService.getGalerias().subscribe(response => {
       const items = response.data.map(item => ({
         image: `${environment.STRAPI_API}${item.attributes.banner.data.attributes.formats.large.url}`,
@@ -50,7 +55,7 @@ export class BrCarousel implements AfterViewInit, OnDestroy {
     });
   }
 
-  preloadImages(items: any[]): Promise<void> {
+  async preloadImages(items: any[]): Promise<void> {
     const promises = items.map(item => {
       return new Promise<void>((resolve, reject) => {
         const img = new Image();
