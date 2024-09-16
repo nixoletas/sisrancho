@@ -184,8 +184,6 @@ export class LinksService {
     { href: 'http://10.56.19.130/resetsenha/', title: 'Trocar senha Sistemas Internos', target: '_blank', icon: 'fa fa-key' },
     { href: 'https://acesso.6cta.eb.mil.br/otp.html', title: 'Trocar senha VPN', target: '_blank', icon: 'fa fa-key' },
     { href: '/sti/chamado', title: 'Abrir chamado simplificado - STI', icon: 'fa fa-headset' },
-    { href: 'https://forms.gle/Mzv7aPybqydCbMj98', title: 'Abrir chamado STI', target: '_blank', icon: 'fa fa-headset' },
-    { href: 'https://docs.google.com/spreadsheets/d/1cE-osGIJ_RXcpex1pA0eubnEpyr2HqR8UmJ9vCn3Dc4/edit?usp=sharing', title: 'Visualizar chamado STI', target: '_blank', icon: 'fa fa-eye' },
     { href: 'http://docs.9bcomge.eb.mil.br/books/sti/page/acesso-vpn', title: 'Como acessar VPN', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://docs.9bcomge.eb.mil.br/books/sti/page/como-solicitar-acesso-avancado-a-internet-youtube-whatsapp', title: 'Como acessar Internet', target: '_blank', icon: 'fa fa-question' },
     { href: 'http://intranet.dct.eb.mil.br/legislacao-tic', title: 'Legislação de TIC', target: '_blank', icon: 'fa fa-book' },
