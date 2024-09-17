@@ -1,10 +1,12 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { OperacoesService } from '../../services/operacoes.service';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'br-operacoes',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, RouterModule],
   templateUrl: './operacoes.component.html',
   styleUrl: './operacoes.component.scss'
 })

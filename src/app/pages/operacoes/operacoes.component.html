@@ -1,5 +1,11 @@
 <h1>Operações</h1>
-@for (item of items; track $index) {
-    <h6>{{item.attributes.titulo}}</h6>
-    {{item.attributes.conteudo}}
-}
+<div *ngFor="let item of items; let i = index">
+  <h6>{{item.attributes.titulo}}</h6>
+  <a [routerLink]="['/operacoes', item.id]">mais</a>
+  <p>{{item.attributes.conteudo}}</p>
+</div>
+
+<!-- Adiciona uma mensagem de loading -->
+<div *ngIf="isLoading">
+  <p>Carregando...</p>
+</div>

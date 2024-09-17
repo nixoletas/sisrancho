@@ -1,0 +1,9 @@
+<div *ngIf="isLoading">
+    <p>Carregando...</p>
+  </div>
+
+  <div *ngIf="!isLoading && postagem">
+    <h1>{{postagem.attributes.titulo}}</h1>
+    <p>{{postagem.attributes.conteudo}}</p>
+  </div>
+  

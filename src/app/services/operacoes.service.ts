@@ -9,10 +9,13 @@ import { Observable } from 'rxjs';
 export class OperacoesService {
   apiUrl = environment.OPERACOES_API;
 
-
   constructor(private http: HttpClient) { }
 
   getOperacoes(): Observable<{data: any[]}> {
     return this.http.get<{ data: any[] }>(this.apiUrl);
+}
+
+getOperacaoById(id: string): Observable<any> {
+  return this.http.get(`${this.apiUrl}/${id}`);
 }
 }

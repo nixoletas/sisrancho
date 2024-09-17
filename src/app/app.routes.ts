@@ -36,6 +36,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { Ciac2Component } from './pages/ciac2/ciac2.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { OperacoesComponent } from './pages/operacoes/operacoes.component';
+import { PostagemDetalheComponent } from './pages/postagem-detalhe/postagem-detalhe.component';
 
 export const routes: Routes = [
     {
@@ -95,6 +96,7 @@ export const routes: Routes = [
       path: 'operacoes',
       component: OperacoesComponent
     },
+    { path: 'operacoes/:id', component: PostagemDetalheComponent },
     {
       path: 's4',
       children: [
