@@ -13,6 +13,7 @@ export const environment = {
   ASSETS_MD: 'http://10.56.19.152/assets/markdown/',
 
   STRAPI_API: 'http://10.56.19.154',
+  OPERACOES_API: 'http://api.9bcomge.eb.mil.br/api/operacoes',
   NEWS_API: 'http://10.56.19.154/api/noticias?populate=*',
   SINGLE_NEWS: 'http://10.56.19.154/api/noticias',
   NIVER_API: 'http://10.56.19.154/api/familias',
