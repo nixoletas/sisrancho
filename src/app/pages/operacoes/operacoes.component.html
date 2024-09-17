@@ -1,8 +1,8 @@
 <h2>OPERAÇÕES</h2>
 <div class="br-divider"></div>
 <div *ngFor="let item of items; let i = index " style="gap: 4px;">
-    <div class="bg-blue-10" style="cursor: pointer; border-radius: 4px;" [routerLink]="['/operacoes', item.id]">
-        <p class="h6">{{item.attributes.titulo}}</p>
+    <div class="bg-blue-5 py-1 my-1" style="cursor: pointer; border-radius: 8px;" [routerLink]="['/operacoes', item.id]">
+        <p class="h4">{{item.attributes.titulo}}</p>
         <p>{{item.attributes.publishedAt}}</p>
     </div>
 </div>
