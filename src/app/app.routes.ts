@@ -35,6 +35,7 @@ import { NewsDetailComponent } from './components/news-detail/news-detail.compon
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { Ciac2Component } from './pages/ciac2/ciac2.component';
 import { UploadComponent } from './components/upload/upload.component';
+import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 
 export const routes: Routes = [
     {
@@ -89,6 +90,10 @@ export const routes: Routes = [
       children: [
         { path: 'documentos', component: DocumentosS3Component },
       ]
+    },
+    {
+      path: 'operacoes',
+      component: OperacoesComponent
     },
     {
       path: 's4',
