@@ -16,7 +16,7 @@
   <div *ngIf="!isLoading && postagem">
     <h1>{{postagem.attributes.titulo}}</h1>
     <p class="br-divider"></p>
-    <p class="mb-2" style="text-align: end;"><strong>Data da postagem:</strong> {{postagem.attributes.publishedAt}}</p>
+    <p class="mb-2" style="text-align: end;"><strong>Publicado em</strong>: {{ formatDate(postagem.attributes.publishedAt).day }}</p>
     <p>{{postagem.attributes.conteudo}}</p>
   </div>
 </div>
