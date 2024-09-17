@@ -1,1 +1,5 @@
-<p>operacoes works!</p>
+<h1>Operações</h1>
+@for (item of items; track $index) {
+    <h6>{{item.attributes.titulo}}</h6>
+    {{item.attributes.conteudo}}
+}
