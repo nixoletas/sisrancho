@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { OperacoesService } from '../../services/operacoes.service';
 import { CommonModule } from '@angular/common';
+import { MarkdownComponent } from 'ngx-markdown';
 
 @Component({
   selector: 'br-postagem-detalhe',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, MarkdownComponent],
   templateUrl: './postagem-detalhe.component.html',
   styleUrl: './postagem-detalhe.component.scss'
 })
