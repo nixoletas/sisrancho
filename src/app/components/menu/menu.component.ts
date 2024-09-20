@@ -168,6 +168,11 @@ export class BrMenuComponent implements AfterViewInit {
               route: 'https://www.ipcfex.eb.mil.br/images/Antigos/Port_850-EME_Dtz_Avl_Fis_EB.pdf',
               external: true
             },
+            {
+              iconClass: 'fa fa-flag',
+              label: 'Operações',
+              route: 'operacoes'
+            },
           ]
         },
         {

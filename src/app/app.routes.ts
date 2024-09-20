@@ -37,6 +37,8 @@ import { Ciac2Component } from './pages/ciac2/ciac2.component';
 import { UploadComponent } from './components/upload/upload.component';
 import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 import { PostagemDetalheComponent } from './pages/postagem-detalhe/postagem-detalhe.component';
+import { PopComponent } from './pages/pop/pop.component';
+import { PopDetalheComponent } from './pages/pop-detalhe/pop-detalhe.component';
 
 export const routes: Routes = [
     {
@@ -90,6 +92,8 @@ export const routes: Routes = [
       path: 's3',
       children: [
         { path: 'documentos', component: DocumentosS3Component },
+        { path: 'pop', component: PopComponent },
+        { path: 'pop/:id', component: PopDetalheComponent },
       ]
     },
     {
