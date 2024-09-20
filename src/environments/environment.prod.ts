@@ -10,6 +10,7 @@ export const environment = {
 
   STRAPI_API: 'http://10.56.19.154',
   OPERACOES_API: 'http://10.56.19.154/api/operacoes',
+  POP_API: 'http://10.56.19.154/api/pops',
   NEWS_API: 'http://10.56.19.154/api/noticias?populate=*',
   SINGLE_NEWS: 'http://10.56.19.154/api/noticias',
   NIVER_API: 'http://10.56.19.154/api/familias',
