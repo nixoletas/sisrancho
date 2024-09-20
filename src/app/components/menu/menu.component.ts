@@ -173,6 +173,11 @@ export class BrMenuComponent implements AfterViewInit {
               label: 'Operações',
               route: 'operacoes'
             },
+            {
+              iconClass: 'fa fa-chart-simple',
+              label: 'POP',
+              route: 's3/pop'
+            },
           ]
         },
         {
