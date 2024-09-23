@@ -3,6 +3,7 @@ import BRMenu from '@govbr-ds/core/dist/components/menu/menu';
 import { LinksService } from '../../services/links.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'br-menu',
@@ -125,6 +126,10 @@ export class BrMenuComponent implements AfterViewInit {
               label: 'Secretaria',
               route: 's1/secretaria'
             },
+            {
+              label: 'Livro de viagem',
+              route: 's1/livro-viagem'
+            }
           ]
         },
         {
@@ -241,6 +246,11 @@ export class BrMenuComponent implements AfterViewInit {
       iconClass: 'fa-user',
       label: 'Apoio ao usuário',
       children: []
+    },
+    {
+      iconClass: 'fa fa-plane',
+      label: 'Livro de viagem',
+      route: '/s1/livro-viagem',
     },
     {
       iconClass: 'fa-utensils',
