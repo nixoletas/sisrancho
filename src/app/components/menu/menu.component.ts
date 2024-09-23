@@ -254,6 +254,12 @@ export class BrMenuComponent implements AfterViewInit {
       route: 'sti/chamado'
     },
     {
+      iconClass: 'fa-headset',
+      label: 'Dúvidas frequentes - STI',
+      route: 'https://memo.9bcomge.eb.mil.br/DQTKhP_VTNGXQ40D0dH4NA#',
+      external: true
+    },
+    {
       iconClass: 'fa-file-pdf',
       label: 'Material carga para planilha',
       route: 'carga-upload'
