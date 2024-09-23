@@ -39,6 +39,7 @@ import { OperacoesComponent } from './pages/operacoes/operacoes.component';
 import { PostagemDetalheComponent } from './pages/postagem-detalhe/postagem-detalhe.component';
 import { PopComponent } from './pages/pop/pop.component';
 import { PopDetalheComponent } from './pages/pop-detalhe/pop-detalhe.component';
+import { LivroViagemComponent } from './pages/livro-viagem/livro-viagem.component';
 
 export const routes: Routes = [
     {
@@ -80,6 +81,7 @@ export const routes: Routes = [
         { path: 'os', component: OsComponent },
         { path: 'ass-jurd', component: AssJurdComponent },
         { path: 'secretaria', component: SecretariaComponent },
+        { path: 'livro-viagem', component: LivroViagemComponent },
       ]
     },
     {
