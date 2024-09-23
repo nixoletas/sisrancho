@@ -48,9 +48,11 @@ export class ChamadoStiComponent {
     this.http.post(this.apiUrl, payload)
       .subscribe(response => {
         this.feedbackSent = true;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }, error => {
         this.feedbackError = true;
         this.feedbackSent = false;
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         setTimeout(() => { this.feedbackError = false }, 2000)
       });
   }
