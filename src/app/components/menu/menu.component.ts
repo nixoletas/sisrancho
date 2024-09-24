@@ -127,7 +127,7 @@ export class BrMenuComponent implements AfterViewInit {
               route: 's1/secretaria'
             },
             {
-              label: 'Livro de viagem',
+              label: 'Livro de saída da guarnição',
               route: 's1/livro-viagem'
             }
           ]
@@ -249,7 +249,7 @@ export class BrMenuComponent implements AfterViewInit {
     },
     {
       iconClass: 'fa fa-plane',
-      label: 'Livro de viagem',
+      label: 'Livro de saída da guarnição',
       route: '/s1/livro-viagem',
     },
     {

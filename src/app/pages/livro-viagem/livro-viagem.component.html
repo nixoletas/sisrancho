@@ -1,16 +1,16 @@
-<h1>Livro de viagem <span class="text-blue-50"> online </span><i class="fa fa-plane"></i></h1>
+<h1>Livro de saída da guarnição<span class="text-blue-50"> online </span><i class="fa fa-plane"></i></h1>
 <div style="display: flex; justify-content: center;">
 <div style="max-width: 800px;" *ngIf="!feedbackSent && !feedbackError">
   <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
       <p class="label mb-3">Posto/Graduação<span class="text-danger">*</span></p>
       <div *ngFor="let rank of ranks; let i = index" class="d-inline-block mr-5 mb-1">
           <div class="br-radio">
-              <input 
-                  [id]="'h-radio-' + i" 
-                  type="radio" 
-                  name="pg" 
-                  [value]="rank" 
-                  [(ngModel)]="feedback.pg" 
+              <input
+                  [id]="'h-radio-' + i"
+                  type="radio"
+                  name="pg"
+                  [value]="rank"
+                  [(ngModel)]="feedback.pg"
                   required
               />
               <label [for]="'h-radio-' + i">{{rank}}</label>
@@ -47,8 +47,8 @@
           </div>
         </div>
       </div>
-      
-  
+
+
 
       <div class="br-input py-2">
           <label for="comment">Motivo da viagem<span class="text-danger">*</span></label>
@@ -70,7 +70,7 @@
         <label for="comment">Telefone do contato de emergência<span class="text-danger">*</span></label>
         <input mask="(00) 9 0000-0000" [showMaskTyped]="true" name="phone" id="phone" [(ngModel)]="feedback.emergencyphone" placeholder="somente números" required>
     </div>
-    
+
 
       <button type="submit" [disabled]="!feedbackForm.form.valid" class="br-button primary active mr-3">Enviar</button>
   </form>
