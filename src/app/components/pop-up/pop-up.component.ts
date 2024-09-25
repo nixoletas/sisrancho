@@ -16,7 +16,7 @@ export class PopUpComponent implements OnInit, OnDestroy {
   isVisible = true;
   popup: string = "";
   imageSrc: string = ""; // Path to the desired image
-  displayTime = 10000; // Time in milliseconds to display the modal
+  displayTime = 20000; // Time in milliseconds to display the modal
   item: any;
   link: string = "/";
   isLoading: boolean = true; // Loading state flag
