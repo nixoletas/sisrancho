@@ -40,6 +40,8 @@ import { PostagemDetalheComponent } from './pages/postagem-detalhe/postagem-deta
 import { PopComponent } from './pages/pop/pop.component';
 import { PopDetalheComponent } from './pages/pop-detalhe/pop-detalhe.component';
 import { LivroViagemComponent } from './pages/livro-viagem/livro-viagem.component';
+import { SPPComponent } from './pages/secoes/spp/spp.component';
+import { AlmoxComponent } from './pages/secoes/almox/almox.component';
 
 export const routes: Routes = [
     {
@@ -83,6 +85,14 @@ export const routes: Routes = [
         { path: 'secretaria', component: SecretariaComponent },
         { path: 'livro-viagem', component: LivroViagemComponent },
       ]
+    },
+    {
+      path: 'spp',
+      component: SPPComponent
+    },
+    {
+      path: 'almox',
+      component: AlmoxComponent
     },
     {
       path: 's2',
