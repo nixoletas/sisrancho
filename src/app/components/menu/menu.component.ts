@@ -229,11 +229,11 @@ export class BrMenuComponent implements AfterViewInit {
         },
         {
           label: 'SPP',
-          route: ''
+          route: 'spp'
         },
         {
           label: 'Almox',
-          route: ''
+          route: 'almox'
         }
       ]
     },
