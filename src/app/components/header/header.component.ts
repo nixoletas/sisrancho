@@ -42,18 +42,6 @@ export class BrHeaderComponent {
       title: '9RM',
     },
     {
-      href: 'http://intranet.badmapcmo.eb.mil.br',
-      name: 'B Adm Ap/CMO',
-      target: '_blank',
-      title: '9 RM',
-    },
-    {
-      href: 'http://hmilacg.eb.mil.br',
-      name: 'H Mil A CG',
-      target: '_blank',
-      title: 'H Mil',
-    },
-    {
       href: 'https://marcacao-consulta.eb.mil.br/#/login',
       name: 'Marcação de consulta',
       target: '_blank',
