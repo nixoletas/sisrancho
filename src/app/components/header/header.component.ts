@@ -50,12 +50,14 @@ export class BrHeaderComponent {
     },
     {
       href: 'https://marcacao-consulta.eb.mil.br/#/login',
+      icon: 'fa-solid fa-notes-medical',
       name: 'Marcação de consulta',
       target: '_blank',
       title: 'pergaminho',
     },
     {
       href: 'http://pergaminho.eb.mil.br/',
+      icon: 'fa-solid fa-book-open-reader',
       name: 'Pergaminho',
       target: '_blank',
       title: 'pergaminho',
