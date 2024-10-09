@@ -48,6 +48,12 @@ export class LinksService {
 
   usefulLinks: Link[] = [
     {
+      href: 'http://sislogmnt.eb.mil.br',
+      title: ' SisLogMnt', target: '_blank',
+      icon: 'fa-solid fa-screwdriver-wrench',
+      description: 'Sistema Logística de Manutenção'
+    },
+    {
       href: 'http://10.56.19.131',
       title: 'SPED 2.9', target: '_blank',
       icon: 'fa fa-file-lines',
