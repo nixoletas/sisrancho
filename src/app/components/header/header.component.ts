@@ -42,6 +42,13 @@ export class BrHeaderComponent {
       title: '9RM',
     },
     {
+      href: 'https://10.56.67.186:1003/logout?',
+      name: 'Login 6º CTA',
+      icon: 'fa-brands fa-safari',
+      target: '_blank',
+      title: 'logincta',
+    },
+    {
       href: 'https://marcacao-consulta.eb.mil.br/#/login',
       name: 'Marcação de consulta',
       target: '_blank',

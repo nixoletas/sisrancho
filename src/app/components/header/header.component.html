@@ -16,6 +16,7 @@
               <div class="title">Acesso Rápido</div>
             </div>
             <a *ngFor="let link of links" class="br-item p-3" style=" color: white; background: transparent;" [href]="link.href" [target]="link.target">
+              <i [class]="link?.icon"></i>
               {{ link.name }}
             </a>
             <a class="br-item p-3" style=" color: white; background: transparent;" routerLink="/ramais">
