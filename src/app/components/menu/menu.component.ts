@@ -266,7 +266,7 @@ export class BrMenuComponent implements AfterViewInit {
     {
       iconClass: 'fa-headset',
       label: 'Dúvidas frequentes - STI',
-      route: 'https://memo.9bcomge.eb.mil.br/DQTKhP_VTNGXQ40D0dH4NA#',
+      route: 'http://docs.9bcomge.eb.mil.br',
       external: true
     },
     {
