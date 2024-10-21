@@ -1,3 +1,5 @@
+cd /home/sti/intranet-gitea
+
 git pull
 
 npm run build
