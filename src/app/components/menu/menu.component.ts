@@ -260,7 +260,7 @@ export class BrMenuComponent implements AfterViewInit {
     },
     {
       iconClass: 'fa-headset',
-      label: 'Chamado - STI',
+      label: 'Chamado STI',
       route: 'sti/chamado'
     },
     {
