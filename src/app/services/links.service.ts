@@ -14,8 +14,7 @@ interface Link {
 export class LinksService {
   mainLinks: Link[] = [
     { href: 'http://sistemas.9bcomge.eb.mil.br', title: 'Sistema Interno', target: '_blank', icon: 'fa fa-id-card' },
-    { href: 'http://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
-    { href: 'http://10.56.19.131', title: 'SPED 2.9', target: '_blank', icon: 'fa fa-file-lines' },
+    { href: 'https://sped.9bcomge.eb.mil.br', title: 'SPED', target: '_blank', icon: 'fa fa-file-lines' },
     { href: 'http://10.56.19.134/band/', title: 'SisBol', target: '_blank', icon: 'fa fa-book' },
     { href: '/s1/boletins', title: 'Boletins', icon: 'fa fa-magnifying-glass' },
     { href: 'http://drive.9bcomge.eb.mil.br/index.php/login', title: 'Drive', target: '_blank', icon: 'fa fa-cloud' },
@@ -187,11 +186,9 @@ export class LinksService {
   ];
 
   userHelp: Link[] = [
-    { href: 'https://ldap.9bcomge.eb.mil.br/resetsenha/', title: 'Trocar senha Sistemas Internos', target: '_blank', icon: 'fa fa-key' },
-    { href: 'https://acesso.6cta.eb.mil.br/otp.html', title: 'Trocar senha VPN', target: '_blank', icon: 'fa fa-key' },
-    { href: '/sti/chamado', title: 'Abrir chamado simplificado - STI', icon: 'fa fa-headset' },
-    { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar VPN', target: '_blank', icon: 'fa fa-question' },
-    { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Como acessar Internet', target: '_blank', icon: 'fa fa-question' },
+    { href: '/sti/chamado', title: 'Abrir chamado STI', icon: 'fa fa-headset' },
+    { href: 'http://docs.9bcomge.eb.mil.br/', title: 'Dúvidas frequentes', target: '_blank', icon: 'fa fa-question' },
+    { href: 'http://docs.9bcomge.eb.mil.br/docs/senhas', title: 'Trocar senhas', target: '_blank', icon: 'fa fa-key' },
     { href: 'http://intranet.dct.eb.mil.br/legislacao-tic', title: 'Legislação de TIC', target: '_blank', icon: 'fa fa-book' },
     { href: 'https://docs.google.com/forms/d/e/1FAIpQLSeA_68qpFhRZbXk9Csh1FncU5KWn6pFsJs-5wXrWOCTDQaizg/viewform', title: 'Abrir chamado P.O', target: '_blank', icon: 'fa fa-hammer' },
   ];
