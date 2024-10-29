@@ -13,8 +13,8 @@ import { RouterModule } from '@angular/router'
   styleUrl: './header.component.scss'
 })
 export class BrHeaderComponent {
-  public title = '9º Batalhão de Comunicações e Guerra Eletrônica'
-  public subtitle = 'Batalhão Major Rondon'
+  public title = 'Sistema de Arranchamento Online'
+  public subtitle = '9º Batalhão de Comunicações e Guerra Eletrônica'
   public signature: string = 'Ministério da Defesa'
   instance: any // Instância do componente angular
 
@@ -30,37 +30,15 @@ export class BrHeaderComponent {
 
   public links: any[] = [
     {
-      href: 'http://intranet.cmo.eb.mil.br',
-      name: 'CMO',
-      target: '_blank',
-      title: 'CMO',
+      href: 'http://intranet.9bcomge.eb.mil.br',
+      name: 'Intranet 9º B Com GE',
+      title: 'Intranet 9º B Com GE',
     },
     {
-      href: 'http://intranet.9rm.eb.mil.br',
-      name: '9ª RM',
+      href: 'http://intranet.9bcomge.eb.mil.br/sti/chamado',
+      name: 'Chamado STI',
       target: '_blank',
-      title: '9RM',
-    },
-    {
-      href: 'https://10.56.67.186:1003/logout?',
-      name: 'Login 6º CTA',
-      icon: 'fa-brands fa-safari',
-      target: '_blank',
-      title: 'logincta',
-    },
-    {
-      href: 'https://marcacao-consulta.eb.mil.br/#/login',
-      icon: 'fa-solid fa-notes-medical',
-      name: 'Marcação de consulta',
-      target: '_blank',
-      title: 'pergaminho',
-    },
-    {
-      href: 'http://pergaminho.eb.mil.br/',
-      icon: 'fa-solid fa-book-open-reader',
-      name: 'Pergaminho',
-      target: '_blank',
-      title: 'pergaminho',
+      title: 'Chamado STI',
     },
   ]
 

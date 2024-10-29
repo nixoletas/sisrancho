@@ -23,23 +23,13 @@ export class BrMenuComponent implements AfterViewInit {
     },
     {
       iconClass: 'fas fa-person-military-rifle',
-      label: 'Arranchar',
-      route: '/s1/servico',
+      label: 'Login',
+      route: '/login',
     },
     {
       iconClass: 'fa-feather',
       label: 'Administrador',
       children: [
-        {
-          iconClass: 'fa-arrow-right',
-          label: 'Cadastro de militar',
-          route: 'institucional/visao'
-        },
-        {
-          iconClass: 'fa-map-pin',
-          label: 'Visualizar usuários',
-          route: 'institucional/endereco'
-        }
       ]
     },
   ]
