@@ -1,11 +1,35 @@
-<form>
-      <div class="col-sm-5 col-lg-5 mb-3">
-        <div class="br-input small input-button">
-          <label for="input-login-small">CPF</label>
-          <input id="input-login-small" type="text" placeholder="Digite seu usuário"/>
-          <button class="br-button" type="button" aria-label="Botão de ação"><i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
+<!-- src/app/login/login.component.html -->
+<form (ngSubmit)="onLogin()">
+  <div class="col-sm-5 col-lg-5 mb-3">
+    <div class="br-input small input-button">
+      <label for="input-login-small">CPF</label>
+      <input 
+        id="input-login-small" 
+        type="text" 
+        placeholder="Digite seu CPF"
+        [(ngModel)]="cpf" 
+        name="cpf"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="col-sm-5 col-lg-5 mb-3">
+    <div class="br-input small input-button">
+      <label for="input-password-small">Senha</label>
+      <input 
+        id="input-password-small" 
+        type="password" 
+        placeholder="Digite sua senha"
+        [(ngModel)]="password" 
+        name="password"
+        required
+      />
+    </div>
+  </div>
+
+  <button class="br-button" type="submit" aria-label="Botão de login">
+    <i class="fas fa-arrow-right" aria-hidden="true"></i> Entrar
+  </button>
 </form>
-  
+      
