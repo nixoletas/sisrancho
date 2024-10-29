@@ -32,6 +32,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('authToken');
+    
   }
 
   getUserCpf(): string | null {
@@ -46,4 +47,5 @@ export class AuthService {
   getAuthStatus(): Observable<boolean> {
     return this.authStatus.asObservable();
   }
+
 }
