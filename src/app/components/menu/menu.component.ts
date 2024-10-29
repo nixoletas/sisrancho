@@ -26,12 +26,6 @@ export class BrMenuComponent implements AfterViewInit {
       label: 'Login',
       route: '/login',
     },
-    {
-      iconClass: 'fa-feather',
-      label: 'Administrador',
-      children: [
-      ]
-    },
   ]
 
   constructor(

@@ -11,8 +11,7 @@
       </div>
       <nav class="menu-body" role="tree">
         <ng-container *ngFor="let lvl1 of menuItems">
-          <ng-container *ngIf="!lvl1.children" [ngTemplateOutlet]="menuItem" [ngTemplateOutletContext]="{ $implicit: lvl1 }" role="treeitem"></ng-container>
-          <ng-container *ngIf="lvl1.children" [ngTemplateOutlet]="menuFolder" [ngTemplateOutletContext]="{ $implicit: lvl1 }" role="treeitem"></ng-container>
+          <ng-container  [ngTemplateOutlet]="menuItem" [ngTemplateOutletContext]="{ $implicit: lvl1 }" role="treeitem"></ng-container>
         </ng-container>
       </nav>
     </div>
