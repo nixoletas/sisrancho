@@ -1,4 +1,4 @@
-# Nova intranet do btl - Intranet 2.0
+# Novo sistema de arranchamento do 9º B Com GE (ainda em desenvolvimento 29 OUT 24)
 modelo [gov.br/ds](https://www.gov.br/ds/home)
 
 ### rodar projeto
