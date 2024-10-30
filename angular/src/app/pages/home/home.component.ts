@@ -15,7 +15,7 @@ export class HomeComponent {
 
   imgSrc = `${environment.ASSETS_PICS}/calendario.jpg`
   bannerStVasc = `${environment.ASSETS_PICS}/st_vasconcelos.jpg`
-  cardapioSrc = `${environment.ASSETS_SVG}/cardapio.svg`
+  cardapioSrc = `/cardapio-logo.svg`
 
   public items: any[] = [
     {

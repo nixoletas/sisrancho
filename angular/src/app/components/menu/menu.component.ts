@@ -36,7 +36,12 @@ export class BrMenuComponent implements AfterViewInit {
     },
   ] : [
     {
-      iconClass: 'fas fa-person-military-rifle',
+      iconClass: 'fas fa-home',
+      label: 'Home',
+      route: '/home',
+    },
+    {
+      iconClass: 'fas fa-user',
       label: 'Login',
       route: '/login',
     },
