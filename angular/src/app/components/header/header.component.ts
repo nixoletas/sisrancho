@@ -24,7 +24,8 @@ export class BrHeaderComponent {
   }
 
   public image = {
-    src: `${environment.ASSETS_PICS}/logo9bcom2.png`,
+    src: "https://www.gov.br/governodigital/pt-br/estrategias-e-governanca-digital/rede-nacional-de-governo-digital/10passos/biblioteca/logo-govbr.png",
+    //src: `${environment.ASSETS_PICS}/logo9bcom2.png`,
     alt: '9º B Com GE',
   }
 
