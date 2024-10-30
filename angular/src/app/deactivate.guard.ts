@@ -7,14 +7,18 @@ import { AuthService } from './auth.service';
   providedIn: 'root'
 })
 export class CanDeactivateGuard implements CanDeactivate<any> {
+  
+  constructor(private authService: AuthService, private router: Router) {}
+
   canDeactivate(
     component: any,
     currentRoute: ActivatedRouteSnapshot,
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot
+
   ): Observable<boolean> | Promise<boolean> | boolean {
     // Check if the user is logged in
-    if (this.authService.isLoggedIn()) {
+    if (this.authService.isAuthenticated()) {
       // Redirect to the dashboard or another appropriate page
       this.router.navigate(['/dashboard']);
       return false; // Prevent navigation to the login page
@@ -22,5 +26,4 @@ export class CanDeactivateGuard implements CanDeactivate<any> {
     return true; // Allow navigation
   }
 
-  constructor(private authService: AuthService, private router: Router) {}
 }
