@@ -16,7 +16,9 @@ db.serialize(() => {
         `CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             cpf TEXT UNIQUE,
-            password TEXT
+            password TEXT,
+            pg TEXT CHECK(pg IN ('Sd EV', 'Sd EP', 'Cb', '3º Sgt', '2º Sgt', '1º Sgt', 'ST', 'Asp Of', '2º Ten', '1º Ten', 'Cap', 'Maj', 'Ten Cel', 'Cel')),
+            nomecompleto TEXT
         )`,
         (err) => {
             if (err) console.error('Erro ao criar a tabela:', err.message);
