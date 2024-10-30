@@ -5,10 +5,7 @@ FROM nginx:alpine as production
 WORKDIR /usr/share/nginx/html
 
 # Copy the built Angular app from the local directory to the container
-COPY dist/teste/browser /usr/share/nginx/html
-
-# Copy the built Angular app from the local directory to the container
-COPY cripto /usr/share/nginx/html/cripto
+COPY ../dist/teste/browser /usr/share/nginx/html
 
 # Copy the custom NGINX configuration file to the container
 COPY nginx.conf /etc/nginx/nginx.conf
