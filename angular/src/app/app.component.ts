@@ -12,5 +12,5 @@ import { BrHeaderComponent } from './components/header/header.component';
 })
 export class AppComponent {
   
-  title = 'intranet-ssr';
+  title = 'sisrancho';
 }
