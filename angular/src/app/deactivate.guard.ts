@@ -10,20 +10,13 @@ export class CanDeactivateGuard implements CanDeactivate<any> {
   
   constructor(private authService: AuthService, private router: Router) {}
 
-  canDeactivate(
-    component: any,
-    currentRoute: ActivatedRouteSnapshot,
-    currentState: RouterStateSnapshot,
-    nextState?: RouterStateSnapshot
-
-  ): Observable<boolean> | Promise<boolean> | boolean {
-    // Check if the user is logged in
+  canDeactivate(): boolean {
     if (this.authService.isAuthenticated()) {
-      // Redirect to the dashboard or another appropriate page
-      this.router.navigate(['/dashboard']);
-      return false; // Prevent navigation to the login page
+      return true;
+    } else {
+      this.router.navigate(['/dashboard']); // Redireciona para a página de login se não estiver autenticado
+      return false;
     }
-    return true; // Allow navigation
   }
 
 }

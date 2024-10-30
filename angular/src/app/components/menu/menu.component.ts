@@ -1,7 +1,8 @@
 import { AfterViewInit, ChangeDetectorRef, Component, NgModule } from '@angular/core';
 import BRMenu from '@govbr-ds/core/dist/components/menu/menu';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { CanDeactivate, RouterModule } from '@angular/router';
+import { AuthService } from '../../auth.service';
 
 @Component({
   selector: 'br-menu',
@@ -23,8 +24,10 @@ export class BrMenuComponent implements AfterViewInit {
   ]
 
   constructor(
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private authService: AuthService
   ) { }
+
 
   ngAfterViewInit() {
     this.instance = new BRMenu('.br-menu', document.querySelector('.br-menu'));
