@@ -9,7 +9,7 @@ import { tap } from 'rxjs/operators';
 })
 export class AuthService {
   private authStatus = new BehaviorSubject<boolean>(this.isAuthenticated());
-  private apiUrl = 'http://localhost:3000/login'; // URL do endpoint de login no Node.js
+  private apiUrl = 'http://localhost:3001/login'; // URL do endpoint de login no Node.js
 
   constructor(private http: HttpClient) {}
 
