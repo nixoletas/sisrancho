@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { ButtonBalloonComponent } from '../../components/button-balloon/button-balloon.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { ButtonBalloonComponent } from '../../components/button-balloon/button-b
   standalone: true,
   imports: [
     ButtonBalloonComponent,
+    MarkdownModule
 ],
   styleUrl: './home.component.scss'
 })
@@ -16,6 +18,8 @@ export class HomeComponent {
   imgSrc = `${environment.ASSETS_PICS}/calendario.jpg`
   bannerStVasc = `${environment.ASSETS_PICS}/st_vasconcelos.jpg`
   cardapioSrc = `/cardapio-logo.svg`
+
+  markdownSrc: string = '/hero.md'
 
   public items: any[] = [
     {
