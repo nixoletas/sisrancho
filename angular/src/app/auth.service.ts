@@ -1,7 +1,7 @@
 // src/app/services/auth.service.ts
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
@@ -30,9 +30,9 @@ export class AuthService {
     return !!localStorage.getItem('authToken');
   }
 
-  logout(): void {
+  logout(): Observable<any> {
     localStorage.removeItem('authToken');
-    
+    return of({ success: true });
   }
 
   getUserCpf(): string | null {

@@ -40,6 +40,9 @@
       </span>
       <span class="content">{{ item.label }}</span>
     </a>
+    <a *ngIf="item.action" (click)="item.action()">
+      <span class="icon"><i [class]="item.iconClass"></i></span><span class="content">{{ item.label }}</span>
+    </a>  
     <a class="menu-item" *ngIf="item.route && item.external" [href]="item.route" [target]="item.target" role="treeitem">
       <span class="icon">
         <i class="fas" [class]="item.iconClass" aria-hidden="true"></i>

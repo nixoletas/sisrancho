@@ -20,7 +20,9 @@ export class LoginComponent {
     this.authService.login(this.cpf, this.password).subscribe({
       next: (response) => {
         console.log('Login bem-sucedido', response);
-        this.router.navigate(['/dashboard']); // Redireciona para a página protegida
+        this.router.navigate(['/dashboard']).then(() => {
+          window.location.reload();
+        }) // Redireciona para a página protegida
       },
       error: (error) => {
         console.error('Erro de login', error);
