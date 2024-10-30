@@ -2,11 +2,13 @@ import { Component, NgModule } from '@angular/core';
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 import { FormsModule, NgModel, NgModelGroup } from '@angular/forms';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @Component({
   selector: 'br-login',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, NgxMaskDirective],
+  providers: [provideNgxMask()],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
