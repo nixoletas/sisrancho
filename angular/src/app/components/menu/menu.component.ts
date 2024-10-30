@@ -26,6 +26,11 @@ export class BrMenuComponent implements AfterViewInit {
   menuItems: MenuItem[] = this.authService.isAuthenticated() ? [
     {
       iconClass: 'fas fa-person-military-rifle',
+      label: 'Dashboard',
+      route: 'dashboard'
+    },
+    {
+      iconClass: 'fas fa-person-military-rifle',
       label: 'Logout',
       action: () => this.logout()
     },
