@@ -1,7 +1,7 @@
 import { AfterViewInit, ChangeDetectorRef, Component, NgModule } from '@angular/core';
 import BRMenu from '@govbr-ds/core/dist/components/menu/menu';
 import { CommonModule } from '@angular/common';
-import { CanDeactivate, Route, Router, RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../auth.service';
 
 interface MenuItem {
@@ -38,12 +38,12 @@ export class BrMenuComponent implements AfterViewInit {
     {
       iconClass: 'fas fa-home',
       label: 'Home',
-      route: '/home',
+      route: 'home',
     },
     {
       iconClass: 'fas fa-user',
       label: 'Login',
-      route: '/login',
+      route: 'login',
     },
   ]
 
