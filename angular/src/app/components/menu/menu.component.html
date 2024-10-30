@@ -40,16 +40,10 @@
       </span>
       <span class="content">{{ item.label }}</span>
     </a>
-    <a *ngIf="item.action" (click)="item.action()">
+    <a class="menu-item" style="cursor: pointer;" *ngIf="item.action" (click)="item.action()" role="treeitem">
       <span class="icon"><i [class]="item.iconClass"></i></span><span class="content">{{ item.label }}</span>
     </a>  
     <a class="menu-item" *ngIf="item.route && item.external" [href]="item.route" [target]="item.target" role="treeitem">
-      <span class="icon">
-        <i class="fas" [class]="item.iconClass" aria-hidden="true"></i>
-      </span>
-      <span class="content">{{ item.label }}</span>
-    </a>
-    <a class="menu-item" *ngIf="!item.route" role="treeitem">
       <span class="icon">
         <i class="fas" [class]="item.iconClass" aria-hidden="true"></i>
       </span>
