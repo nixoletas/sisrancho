@@ -44,6 +44,16 @@ export class AuthService {
     return null;
   }
 
+  getUserData(): Observable<any> {
+    const token = localStorage.getItem('authToken');
+    const headers = new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+    });
+
+    return this.http.get('http://localhost:3001/user', { headers });
+}
+
   getAuthStatus(): Observable<boolean> {
     return this.authStatus.asObservable();
   }

@@ -16,11 +16,11 @@ const SECRET_KEY = process.env.SECRET_KEY || 'chave_secreta';
 
 // Rota de registro de usuários
 app.post('/register', async (req, res) => {
-    const { cpf, password } = req.body;
-    if (!cpf || !password) return res.status(400).json({ error: 'CPF e senha são obrigatórios' });
+    const { cpf, pg, nomecompleto, password } = req.body;
+    if (!cpf || !password || !pg || !nomecompleto) return res.status(400).json({ error: 'Preencha todos os campos!' });
 
     const hashedPassword = await bcrypt.hash(password, 10);
-    db.run(`INSERT INTO users (cpf, password) VALUES (?, ?)`, [cpf, hashedPassword], (err) => {
+    db.run(`INSERT INTO users (cpf, pg, nomecompleto, password) VALUES (?, ?, ?, ?)`, [cpf, pg, nomecompleto, hashedPassword], (err) => {
         if (err) return res.status(500).json({ error: 'Erro ao registrar o usuário' });
         res.status(201).json({ message: 'Usuário registrado com sucesso!' });
     });
@@ -56,7 +56,8 @@ app.post('/logout', authenticateToken, (req, res) => {
 
 // Middleware de autenticação para rotas protegidas
 function authenticateToken(req, res, next) {
-    const token = req.headers['authorization'];
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1]; // extrair o token sem o 'Bearer'
     if (!token) return res.status(401).json({ error: 'Token não fornecido' });
 
     jwt.verify(token, SECRET_KEY, (err, user) => {
@@ -69,6 +70,17 @@ function authenticateToken(req, res, next) {
 // Exemplo de rota protegida
 app.get('/protected', authenticateToken, (req, res) => {
     res.json({ message: 'Acesso à rota protegida!', user: req.user });
+});
+
+app.get('/user', authenticateToken, (req, res) => {
+    const userId = req.user.id;
+
+    db.get(`SELECT id, cpf, pg, nomecompleto FROM users WHERE id = ?`, [userId], (err, user) => {
+        if (err) return res.status(500).json({ error: 'Erro ao buscar dados do usuário' });
+        if (!user) return res.status(404).json({ error: 'Usuário não encontrado' });
+        
+        res.json(user);
+    });
 });
 
 const PORT = process.env.PORT || 3000;

@@ -11,11 +11,22 @@ import { AuthService } from '../../auth.service';
 })
 export class DashboardComponent implements OnInit {
   userCpf: string | null = '';
+  userPg: string | null = '';
+  userNomeCompleto: string | null = '';
 
   constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
-    this.userCpf = this.authService.getUserCpf(); // Obtém o CPF do usuário
+    this.authService.getUserData().subscribe({
+      next: (user) => {
+        this.userCpf = user.cpf;
+        this.userPg = user.pg;
+        this.userNomeCompleto = user.nomecompleto;
+      },
+      error: (err) => {
+        console.error('Erro ao buscar dados do usuário:', err);
+      }
+    });
   }
 
 }
