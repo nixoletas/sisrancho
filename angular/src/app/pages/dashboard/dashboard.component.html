@@ -1,6 +1,22 @@
 <!-- src/app/dashboard/dashboard.component.html -->
 <div>
-    <h1 style="font-weight: bold;">Painel de arranchamento 🥘</h1>
-    <p style="text-transform: uppercase;">{{userPg}} {{userNomeCompleto}}</p>
-  </div>
+  <h1 style="font-weight: bold;">Painel de arranchamento 🥘</h1>
+  <p style="text-transform: uppercase;">{{userPg}} {{userNomeCompleto}}</p>
+</div>
+<div class="dashboard">
+  <h2>Painel de Arranchamento</h2>
   
+  <div>
+    <label>Selecionar data para arranchar:</label>
+    <input type="date" (change)="onDateSelect($event)" />
+    <button (click)="addArranchamento()">Arranchar</button>
+  </div>
+
+  <h3>Meus Arranchamentos</h3>
+  <ul>
+    <li *ngFor="let arranchamento of arranchamentos">
+      {{ arranchamento.data_arranchamento }} - {{ arranchamento.status }}
+      <button *ngIf="arranchamento.status === 'Agendado'" (click)="cancelArranchamento(arranchamento.data_arranchamento)">Cancelar</button>
+    </li>
+  </ul>
+</div>
