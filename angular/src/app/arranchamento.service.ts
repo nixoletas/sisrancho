@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,10 +9,10 @@ import { Observable } from 'rxjs';
 export class ArranchamentoService {
   private apiUrl = 'http://localhost:3001';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private authService: AuthService) { }
 
   getArranchamentos(cpf: string): Observable<any> {
-    const headers = new HttpHeaders({ 'Authorization': localStorage.getItem('authToken') || '' });
+    const headers = new HttpHeaders({ 'Authorization': this.authService.authToken || '' });
     return this.http.get(`${this.apiUrl}/arranchamentos/${cpf}`, { headers });
   }
 
