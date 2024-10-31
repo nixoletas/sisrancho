@@ -1,4 +1,8 @@
-# **Alimentação Saudável** 🍎
+<div align="center">
+
+### **Alimentação Saudável** 🍎
+
+</div>
 
 Adotar uma alimentação saudável é fundamental para manter o corpo e a mente equilibrados, prevenir doenças e melhorar a qualidade de vida. Abaixo estão algumas dicas práticas para tornar sua alimentação mais saudável no dia a dia.
 
