@@ -26,4 +26,20 @@ db.serialize(() => {
     );
 });
 
+db.serialize(() => {
+    db.run(
+        `CREATE TABLE IF NOT EXISTS arranchamentos (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_cpf TEXT,
+            data_arranchamento TEXT,
+            refeicao TEXT CHECK(refeicao IN ('cafe', 'almoco', 'janta')),
+            status TEXT CHECK(status IN ('Agendado', 'Cancelado')) DEFAULT 'Agendado',
+            FOREIGN KEY (user_cpf) REFERENCES users(cpf)
+        )`,
+        (err) => {
+            if (err) console.error('Erro ao criar a tabela arranchamentos:', err.message);
+        }
+    );
+});
+
 module.exports = db;

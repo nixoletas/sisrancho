@@ -83,6 +83,46 @@ app.get('/user', authenticateToken, (req, res) => {
     });
 });
 
+
+//============ ARRANCHAMENTO =================
+
+app.get('/arranchamentos/:cpf', authenticateToken, (req, res) => {
+    const cpf = req.params.cpf;
+
+    db.all(`SELECT * FROM arranchamentos WHERE user_cpf = ?`, [cpf], (err, rows) => {
+        if (err) return res.status(500).json({ error: 'Erro ao buscar arranchamentos' });
+        res.json(rows);
+    });
+});
+
+// Endpoint para adicionar um novo arranchamento
+app.post('/arranchamentos', authenticateToken, (req, res) => {
+    const { cpf, dataArranchamento, refeicao } = req.body;
+
+    db.run(
+        `INSERT INTO arranchamentos (user_cpf, data_arranchamento, refeicao) VALUES (?, ?, ?)`,
+        [cpf, dataArranchamento, refeicao],
+        (err) => {
+            if (err) return res.status(500).json({ error: 'Erro ao agendar arranchamento' });
+            res.json({ message: 'Arranchamento agendado com sucesso!' });
+        }
+    );
+});
+
+// Endpoint para cancelar um arranchamento
+app.put('/arranchamentos/cancel', authenticateToken, (req, res) => {
+    const { cpf, dataArranchamento, refeicao } = req.body;
+
+    db.run(
+        `UPDATE arranchamentos SET status = 'Cancelado' WHERE user_cpf = ? AND data_arranchamento = ? AND refeicao = ?`,
+        [cpf, dataArranchamento, refeicao],
+        (err) => {
+            if (err) return res.status(500).json({ error: 'Erro ao cancelar arranchamento' });
+            res.json({ message: 'Arranchamento cancelado com sucesso!' });
+        }
+    );
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
