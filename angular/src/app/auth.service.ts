@@ -16,11 +16,12 @@ export class AuthService {
   login(cpf: string, password: string): Observable<any> {
     const body = { cpf, password };
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-
+    
     return this.http.post(this.apiUrl, body, { headers }).pipe(
       tap((response: any) => {
         if (response && response.token) {
           localStorage.setItem('authToken', response.token);
+          console.log(response.token)
         }
       })
     );

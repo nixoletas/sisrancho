@@ -1,7 +1,7 @@
 import { Component, NgModule, OnInit } from '@angular/core';
 import { AuthService } from '../../auth.service';
 import { ArranchamentoService } from '../../arranchamento.service';
-import { CommonModule } from '@angular/common';
+import { CommonModule, getLocaleFirstDayOfWeek } from '@angular/common';
 
 @Component({
   selector: 'br-dashboard',
@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dashboard.component.scss'
 })
 export class DashboardComponent implements OnInit {
-  userCpf: string | null = '';
+  userCpf: string = '';
   userPg: string | null = '';
   userNomeCompleto: string | null = '';
   arranchamentos: any[] = [];
@@ -29,11 +29,13 @@ export class DashboardComponent implements OnInit {
         this.userCpf = user.cpf;
         this.userPg = user.pg;
         this.userNomeCompleto = user.nomecompleto;
+        this.loadArranchamentos(this.userCpf);
       },
       error: (err) => {
         console.error('Erro ao buscar dados do usuário:', err);
       }
     });
+
   }
 
   loadArranchamentos(cpf: string): void {
